@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "node --env-file=.env -r ts-node/register src/handler.ts",
     "build": "tsc",
-    "start": "node --env-file=.env ./dist/src/handler.js"
+    "start": "node --env-file=.env ./dist/src/handler.js",
+    "inspect": "npx @modelcontextprotocol/inspector node --env-file=.env ./dist/src/handler.js"
   },
   "dependencies": {
     "@google/genai": "^1.30.0",
