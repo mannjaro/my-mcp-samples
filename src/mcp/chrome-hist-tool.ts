@@ -35,6 +35,11 @@ const getWindowsUsername = (): string => {
 
 // OSごとのChrome履歴ファイルのデフォルトパス
 function getChromeHistoryPath() {
+  const isWslEnv = isWSL();
+  if (isWslEnv) {
+    const winUsername = getWindowsUsername();
+    return `C:\\Users\\${winUsername}\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\History`;
+  }
   const homeDir = os.homedir();
   switch (process.platform) {
     case 'darwin': // macOS
