@@ -38,7 +38,7 @@ function getChromeHistoryPath() {
   const isWslEnv = isWSL();
   if (isWslEnv) {
     const winUsername = getWindowsUsername();
-    return `C:\\Users\\${winUsername}\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\History`;
+    return `/mnt/c/Users/${winUsername}/AppData/Local/Google/Chrome/User Data/Default/History`;
   }
   const homeDir = os.homedir();
   switch (process.platform) {
