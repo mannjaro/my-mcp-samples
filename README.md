@@ -8,6 +8,11 @@ To run:
 npm run dev
 ```
 
+To build:
+```sh
+npm run build && npm run start
+```
+
 Set env
 
 ```

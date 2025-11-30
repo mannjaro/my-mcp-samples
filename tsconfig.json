@@ -1,8 +1,24 @@
 {
   "compilerOptions": {
+    "target": "es2022",
+    "module": "esnext",
+    "declaration": true,
+    "moduleResolution": "bundler",
     "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "skipLibCheck": true,
+    "types": [
+      "node"
+    ],
+    "noEmit": true,
+    "rootDir": ".",
     "jsx": "react-jsx",
     "jsxImportSource": "hono/jsx"
-  }
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
 }
